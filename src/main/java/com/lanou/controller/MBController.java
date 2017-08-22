@@ -76,5 +76,15 @@ public class MBController {
     public String gittest(){
         return "bbb";
     }
+    //编辑代码
+    @RequestMapping(value = "/branch")
+    @ResponseBody
+    public String branchTest(){
+
+        
+        return "branch";
+    }
+
+
 
 }
