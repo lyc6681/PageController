@@ -71,5 +71,10 @@ public class MBController {
     }
 
 
+    @RequestMapping(value = "/test")
+    @ResponseBody
+    public String gittest(){
+        return "bbb";
+    }
 
 }
