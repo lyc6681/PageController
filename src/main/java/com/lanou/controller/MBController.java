@@ -77,4 +77,9 @@ public class MBController {
         return "bbb";
     }
 
+    public void test(){
+        System.out.println("test");
+    }
+
+
 }
