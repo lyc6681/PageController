@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lanou.mapper.MessageMapper">
+
+
+    <resultMap id="MbMap1" type="Message">
+        <id column="id" property="id"/>
+        <result column="context" property="content"/>
+        <result column="upCount" property="up"/>
+        <result column="downCount" property="down"/>
+        <association property="user" column="userid" select="com.lanou.mapper.UserMapper.findById"/>
+    </resultMap>
+
+
+    <select id="findAll" resultType="Message" resultMap="MbMap1">
+        SELECT * FROM messageboard
+    </select>
+
+    <select id="findByUId" resultMap="MbMap1" parameterType="Integer">
+        SELECT * FROM messageboard WHERE userid = #{id}
+    </select>
+    <select id="findById" resultMap="MbMap1" parameterType="Integer">
+        SELECT * FROM messageboard WHERE id = #{id}
+    </select>
+
+    <insert id="addNew" useGeneratedKeys="true" keyProperty="id" parameterType="Message" >
+        INSERT INTO messageboard VALUES (NULL ,#{content},#{user.id},0,0)
+    </insert>
+    <delete id="delete" parameterType="Integer">
+        DELETE FROM messageboard WHERE id = #{id}
+    </delete>
+    <update id="update" parameterType="Message">
+        UPDATE messageboard SET upCount = #{up},downCount =#{down} Where id = #{id}
+    </update>
+
+
+
+</mapper>
