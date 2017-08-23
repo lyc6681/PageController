@@ -94,17 +94,14 @@ public class MBController {
     public void ttttt(){
         System.out.println("sadasd");
         System.out.println("asdas");
+        System.out.println("真费劲啊");
+    }
+    public void ttttt(int a){
+        System.out.println("sadasd");
         System.out.println("asdas");
-        System.out.println("asdas");
-        System.out.println("asdas");
-        System.out.println("asdas");
+        System.out.println("真费劲啊");
     }
 
-
-
-    public static void main(String[] args) {
-
-    }
 
 
 
