@@ -92,7 +92,7 @@ public class MBController {
     }
 
     public void ttttt(){
-
+        System.out.println("sadasd");
     }
 
 
