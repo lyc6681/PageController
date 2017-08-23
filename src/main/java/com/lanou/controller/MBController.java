@@ -76,5 +76,34 @@ public class MBController {
     public String gittest(){
         return "bbb";
     }
+    //编辑代码
+    @RequestMapping(value = "/branch")
+    @ResponseBody
+    public String branchTest(){
+
+        
+        return "branch";
+    }
+
+
+
+    public void test(){
+        System.out.println("test");
+    }
+
+    public void ttttt(){
+        System.out.println("sadasd");
+        System.out.println("asdas");
+        System.out.println("真费劲啊");
+    }
+    public void ttttt(int a){
+        System.out.println("sadasd");
+        System.out.println("asdas");
+        System.out.println("真费劲啊");
+    }
+
+
+
+
 
 }
